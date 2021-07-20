@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第0章　HTMLとは</title>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第0章　HTMLとは</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">HyperText Markup Language（HTML）は、ウェブページを作成するために開発された一つ言語です。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--HTMLとは-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">HTMLとは</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+
+
+    <!--ハイパーテキスト・マークアップ・ランゲージ-->
+    <button type="button" class="collapsible">ハイパーテキスト・マークアップ・ランゲージ</button>
+    <div class="collapse-content">
+        <p>
+            HTML（エイチティーエムエル）とは「Hyper Text Markup Language（ハイパーテキスト・マークアップ・ランゲージ）」の頭文字をとった略称です。
+            インターネット上で公開されてるウェブページのほとんどはHTMLで作成されていて、         ウェブサイトの基礎といえる言語です。<br><br>
+        基本的に、文章は「タイトル」「見出し」「段落」などの要素から成立しています。 <br>
+        ハイパーリンクや画像等のマルチメディアを埋め込むハイパーテキストとしての機能、見出しや段落といったドキュメントの抽象構造、フォントや文字色の指定などの見た目の指定、などといった機能がある。  
+        </p>
+    </div>
+
+
+
+    <!--ハイパーテキスト-->
+    <button type="button" class="collapsible">ハイパーテキスト</button>
+    <div class="collapse-content">
+      <p>
+      ハイパーテキストでは、ウェブページから別のウェブページにリンクをはったり、 ウェブページ内に画像・動画・音声などのデータファイルをリンクで埋め込むことができます。 HTMLには、このハイパーリンク機能で関連する情報同士を結びつけて、情報を整理するという特徴があります。</p>
+      <img style="height: 200px"; src="../assets/img/html00/html02.png" alt="markup pic here">
+        <br><br>
+    </div>
+
+
+
+    <!--マークアップ-->
+    <button type="button" class="collapsible">マークアップ</button>
+    <div class="collapse-content">
+             
+        <p>マークアップとは、文書の各部分が、どのような役割を持っているのかを示すということです。 <br>例えば、見出し・段落・表・リストなど、文書の中で各部分が果たしている役割が分かるように目印をつけます。<br> こうした見出し・段落・表・リストなどの文書内の各部分を要素（element）と呼びます。 </p>
+        <img style="height: 250px"; src="../assets/img/html00/html01.png" alt="markup pic here">
+        <br><br>
+    </div>
+
+
+
+    <!--初めてのHTML-->
+    <button type="button" class="collapsible">初めてのHTML</button>
+    <div class="collapse-content">
+        <p>
+テキストエディタで文章を書いて、拡張子を「.html」にして保存すればhtmlファイルのできあがりです。<br><br>
+<img style="height: 250px"; src="../assets/img/html00/html03.jpg" alt="html03 pic here">
+<br><br><br>
+テキストエディタで下記の文章を書いてブラウザーで開けよう。<br><br>
+
+<b>例：</b>[sample0-1.html]
+<pre class="prettyprint linenums">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;タイトル&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;大見出し&lt;/h1&gt;
+&lt;h2&gt;中見出し&lt;/h2&gt;
+&lt;p&gt;本文です。&lt;/p&gt;
+&lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png"&gt;
+&lt;/html&gt;</pre>
+<b>実行結果</b><br>
+<img style="height: 350px"; src="../assets/img/html00/html05.jpg" alt="html04 pic here"><br>
+※イメージの表示はインタネットに接続必要があります。
+        </P>
+    </div>
+
+
+
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

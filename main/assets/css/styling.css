@@ -1,0 +1,253 @@
+/* collapse code start */
+.collapsible {
+  background-color: #110d1080;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px 15px 15px 15px;
+  margin: 2.5px 0px 2.5px 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+
+}
+
+.active, .collapsible:hover {
+  background-color: #3d4d4c80;
+  border: solid;
+  border-width: 2px;
+  outline: none;
+
+}
+.active, .collapsible:focus {
+  background-color: #3d4d4c80;
+  border: solid;
+  border-width: 2px;
+  outline: none;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  outline: none;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.collapse-content {
+  margin: 0px 0px 0px 0px !important;
+  border-radius: 10px;
+  padding: 0px 15px 0px 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+ /* background-color: grey;*/
+  font-size: 15px;
+ /* color:white;*/
+}
+/* collapse code end */
+
+
+/* top page row color */
+.list-group-item{position:relative;display:block;padding:.75rem 1.25rem;margin-bottom:-1px;background-color:#110d1080;border:1px solid rgba(0,0,0,.125)}
+.list-group-item:first-child{border-top-left-radius:10px;border-top-right-radius:10px}
+.list-group-item:last-child{margin-bottom:0;border-bottom-right-radius:10px;border-bottom-left-radius:10px}
+
+
+/* top page row hover */
+.list-group-item-action{width:100%;color:#000000;text-align:inherit}
+.list-group-item-action:focus,
+.list-group-item-action:hover{z-index:1;color:#000000;text-decoration:none;background-color:#3d4d4c80;border:solid;border-width: 2px;outline: none;}
+/*.list-group-item-action:active{color:#e7bd42;background-color:#000000}*/
+
+
+/* code-prettify use */
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+
+/* 
+img {
+  border: 1px solid #555!important;
+}*/
+
+.head1{
+  padding: 0px 50px 20px 0px;
+  color:#ebeef2;
+  font-size: 40px;
+}
+
+.head2{
+  padding: 00px 0px 30px 0px;
+  color:#ebeef2;
+  font-size: 20px;
+}
+
+.home-btn{
+  padding: 3px 10px 4px 10px;
+  font-size:14px; 
+  height:40px; 
+  width:90px;
+  color:#ffffff!important;
+  border-radius: 4px;
+  text-decoration:none!important;
+}
+
+.home-btn:hover{
+  color:#000000!important;
+  box-shadow:0 0 0 .15rem rgba(230, 220, 195)}
+
+/* return button */
+.return-btn{margin:0px 50px 0px 00px ;padding: 3px 20px 3px 20px;font-size:20px; height:40px;width:90px;border-radius: 6px;text-decoration:none!important;}
+.btn-info{color:black;background-color:#110d1080;border-color:#110d10;box-shadow:0 0 0 .15rem rgba(148, 154, 161)}
+.btn-info:hover{color:black;background-color:#3d4d4c80;outline: none;box-shadow:0 0 0 .15rem rgba(0,0,0)}
+.btn-info.disabled,.btn-info:disabled{color:#fff;background-color:#000000;border-color:#000000}
+.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle{/*color:#e7bd42;background-color:#000000;border-color:#000000*/}
+/* return button end*/
+
+
+
+
+/* top page bullet*/
+.top-bullet{
+  padding: 3px 10px 4px 10px;
+  font-size:14px; 
+  height:40px; 
+  width:90px;
+  color:#ebeef2;
+  border-radius: 2.5px;
+}
+
+.home_icon{
+/* position:absolute;*/
+top:0px; 
+left:auto;
+}
+
+body {
+  /* background-color: black!important;*/
+  /*background-image: url("../../assets/img/paper.jpg");*/
+  overflow-x: hidden; /* hide horizontal scroll */
+  -webkit-user-select: none; /* Safari prevent selection */
+  -ms-user-select: none; /* IE 10 and IE 11 prevent selection*/
+  user-select: none; /* Standard syntax prevent selection*/
+}
+
+
+
+/* dark mode*/
+.dark{
+  background-color: #292c35;
+  color: #ebeef2;
+}
+.dark .collapsible {
+  background-color: #39414d;
+  color: #ebeef2;
+}
+.dark .active, .collapsible:hover {
+  background-color: #3d4d4c80;
+  border: solid;
+  border-width: 2px;
+  outline: none;
+}
+.dark .active,.collapsible:focus {
+  background-color: #3d4d4c80;
+  border: solid;
+  border-width: 2px;
+  outline: none;
+}
+.dark .btn-info{color:#ebeef2;background-color:#39414d;border-color:#110d10;box-shadow:0 0 0 .15rem rgba(71, 80, 94)}
+.dark .btn-info:hover{color:#ebeef2;background-color:#3d4d4c80;box-shadow:0 0 0 .15rem rgba(235, 238, 242)}
+.dark .list-group-item{color:#ebeef2;position:relative;display:block;padding:.75rem 1.25rem;margin-bottom:-1px;background-color:#39414d;border:1px solid rgba(0,0,0,.125)}
+.dark .list-group-item-action:hover{z-index:1;color:#ebeef2;text-decoration:none;background-color:#3d4d4c80; border:solid;border-width: 2px;outline: none;}
+/* dark mode end*/
+
+
+
+
+
+
+
+
+
+/* darkmode switch */
+.switch {
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  z-index: 99;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 36px;
+  left: 20px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px pink;/*pink or #2020203d*/
+  background: white url('../../assets/img/themeslider/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
+  background: white url('../../assets/img/themeslider/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* darkmode switch end*/

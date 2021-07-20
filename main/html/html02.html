@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第2章　画像の入れ方</title>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第2章　画像の入れ方</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、画像の挿入について説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--画像の入れ方-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">画像の入れ方</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+
+
+    <!--HTMLタグとは-->
+    <button type="button" class="collapsible">1.&lt;img&gt;タグ</button>
+    <div class="collapse-content">
+        <p>
+    HTMLで画像を挿入するためには &lt;img&gt;タグを使用します。<br><br>
+      <b>※&lt;img&gt;</b>に終了タグがありません<br><br>
+
+    <b>src</b>属性は画像のパスを指定します。指定する際は絶対パス、相対パスどちらでも可能です。<br><br>
+
+    <b>title</b>属性は画像やリンク先のタイトルを表示します。マウスカーソルを画像に合わせると吹き出し形式で表示されます。<br><br>
+
+    <b>alt</b>属性は何らかの理由でブラウザが画像を表示できない場合の代わりにテキストを提供します<br><br>
+
+    <b>width、height</b>属性は図面の幅と高さを指定できます。ピクセル数またはパーセントで指定可能です。<br>
+
+<br><br>
+<b>例：</b>[sample2-1.html]
+
+<pre class="prettyprint linenums">
+&lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="pet" width="120" height="100"&gt;
+</pre>
+<b>実行結果</b><br><br>
+    <div style="background-color: darkgray;">
+<img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="pet" width="120" height="100">
+        </P>
+    </div>
+       </div>
+
+
+
+
+    <!--2.画像をリンクとして利用-->
+    <button type="button" class="collapsible">2.画像をリンクとして利用</button>
+    <div class="collapse-content">
+        <p>&lt;a&gt;タグの内部にimg&lt;タグ&gt;を設定するだけで画像をリンクとして利用可能です。
+
+
+
+
+<pre class="prettyprint linenums">
+&lt;a href="遷移させたいURL"&gt; &lt;img src="画像のパス" alt="テキスト"&gt;&lt;/a&gt;
+</pre>
+<b>例：</b>[sample2-2.html]<br>
+<pre class="prettyprint linenums">
+&lt;a href="https://academy.addli-ne.com/"&gt; 
+    &lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="クリックしてください" width="15%"&gt;
+&lt;/a&gt;
+</pre>
+<b>実行結果</b><br><br>
+    <div style="background-color: darkgray;">
+犬をクリックしてください。<br>
+<a href="https://academy.addli-ne.com/">
+    <img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="クリックしてください" width="15%">
+</a>    
+        </P>
+    </div>        
+    </div>
+
+
+
+
+    <!--コメントの書き方-->
+    <button type="button" class="collapsible">3.コメントの書き方</button>
+    <div class="collapse-content">
+             
+        <p>&lt;!-- ... --&gt; は HTMLソースの中にコメントを記述します。コメントはブラウザには表示されません。</p>
+<pre class="prettyprint linenums">
+&lt;!--  コメント --&gt;
+</pre>
+
+<p>&lt;!-- ... --&gt; の間を改行して書くこともできます。  
+<pre class="prettyprint linenums">
+&lt;!--  
+改行しても
+コメントに
+なります 
+--&gt;
+</pre>    
+
+
+<b>例：</b>[sample2-3.html]<br>
+<pre class="prettyprint linenums">
+&lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="pet" width="120" height="100"&gt;
+&lt;!--&lt;p&gt;　　猫です。&lt;/p&gt;--&gt;
+&lt;p&gt;　　犬です。&lt;/p&gt;
+</pre>
+
+<b>実行結果</b><br><br>
+    <div style="background-color: darkgray;">
+<img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="pet" width="120" height="100">
+<!--<p>　　猫です。</p>-->
+<p>　　犬です。</p>
+ 
+        </P>
+    </div> 
+    </div>
+
+
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex2_1.html]<br>
+        下記のページを作成してください。<br>
+        ただし、イメージのクリック効果はイメージに遷移すること。</p>
+
+
+    <div style="background-color: darkgray;">
+        <h1 align="left">犬探してます</h1>
+        <h3>2021年1月23日 大阪市北区付近で行方不明</h3>
+        <div>
+        <a href="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png">
+            <img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" alt="犬の画像" title="クリックしてください" width="150" height="130">
+        </a>
+        犬をクリックしてください    
+        </div>    
+        <br>
+        <h4>犬のプロフィール</h4>
+        <p>
+        名前：タマネギ　種類：雑類<br>
+        性別：オス　　　年齢：４歳<br>
+        毛色：茶色　　　大きさ：30CM<br>
+        首輪：赤色<br><br>
+        <b>見かけた方や、保護された方は下記へご連絡お願いします。</b><br>
+        連絡先：<a href="mailto:google＠gmail.com">google＠gmail.com</a>
+        </p>
+    </div>    
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

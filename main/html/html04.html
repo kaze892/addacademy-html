@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第４章　フォーム</title>
+    <style>
+    table {
+    border-collapse: separate;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第４章　フォーム</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、フォーム入力について説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--リスト・テーブル-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">フォーム</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+    <!--フォームとは-->
+    <button type="button" class="collapsible">1.フォームとは</button>
+    <div class="collapse-content">
+        <p>フォームとは入力欄や送信ボタンの集まりのことです。フォームに入力されたデータ（名前やプロフィール文、性別などの値）は、送信ボタンを押すことでデータが送信され、一定の処理が行われます。</p>
+    <br><br>
+
+
+    &lt;FORM&gt;～&lt;/FORM&gt;の間に、
+    &lt;INPUT&gt;・&lt;SELECT&gt;・
+    &lt;TEXTAREA&gt;等のタグにより、
+    一行テキストボックス・ボタン・チェックボックス・ラジオボタン・セレクトボックス・スクロールテキストボックス等の部品を配置します。</p>
+    <pre class="prettyprint linenums">
+&lt;html&gt;
+    &lt;form action="/form.php" method="post"&gt;
+        &lt;!-- フォームの部品 --&gt;
+    &lt;/form&gt;
+&lt;/html&gt;
+</pre>
+    </div>
+
+
+
+
+    <!--2.<input>タグ-->
+    <button type="button" class="collapsible">2.&lt;input&gt;タグ</button>
+    <div class="collapse-content">
+        <p>&lt;INPUT&gt;タグはテキスト入力欄や実行ボタン等、
+    フォーム&lt;FORM&gt;～&lt;/FORM&lt;）を構成する部品を作成するタグです。<br>
+    type属性の値により、一行テキストボックス・チェックボックス・ラジオボタン・実行ボタン・リセットボタン等の部品となります。 
+    </P>
+<ul>
+    <li><b>type="text"</b>一行テキストボックスを作成します
+    <li><b>type="tel"</b>電話番号の入力欄を作成します
+    <li><b>type="email"</b>メールアドレスの入力欄を作成します
+    <li><b>type="password"</b>パスワード入力欄を作成します
+    <li><b>type="date"</b>日付の入力欄を作成します
+    <li><b>type="range"</b>レンジの入力欄を作成します
+    <li><b>type="checkbox"</b>チェックボックスを作成します
+    <li><b>type="radio"</b>ラジオボタンを作成します
+    <li><b>type="file"</b>ファイルを送信する際に、送信するファイルを選択します 
+    <li><b>type="hidden"</b>隠しデータをサーバーに送信する際に使用します
+    <li><b>type="submit"</b>送信ボタンを作成します
+    <li><b>type="reset"</b>リセットボタンを作成します
+    <li><b>type="button"</b>汎用ボタンを作成します
+    <li><b>name</b>属性は、入力部品に名前をつけます
+    <li><b>value</b>属性は、入力値を指定できます
+    <li><b>size</b>属性は、表示文字数を指定します
+    <li><b>maxlength</b>属性は、入力可能な最大文字数を指定します
+    <li><b>required</b>属性は、入力必須を指定します
+    <li><b>placeholder</b>属性は、初期表示する内容を指定します
+
+</ul>
+<b>例：</b>[sample4-1.html]<br>
+<pre class="prettyprint linenums">
+日付：  &lt;input type="date"&gt;&lt;br&gt;
+名前：  &lt;input type="text" size="10" value="yamada taro"&gt;&lt;br&gt;
+email： &lt;input type="email" value="google@gmail.com"&gt;&lt;br&gt;
+パスワード：&lt;input type="password" value="123456"&gt;&lt;br&gt;
+性別：  &lt;input name="sex" type="radio">男&lt;input name="sex" type="radio"&lt;女&gt;&lt;br&gt;
+ファイル：&lt;input type="file" name="file"&gt;&lt;br&gt;
+&lt;input type="checkbox" name="agree" value="体育"&gt;利用規約に同意する&lt;br&gt;
+&lt;input type="submit" value="送信"&gt;&lt;input type="reset" value="リセット"&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+    日付：  <input type="date"><br>
+    名前：  <input type="text" size="10" value="yamada taro"><br>
+    email： <input type="email" value="google@gmail.com"><br>
+    パスワード：<input type="password" value="123456"><br>
+    性別：  <input name="sex" type="radio">男<input name="sex" type="radio">女<br>
+    ファイル：<input type="file" name="file"><br>
+    <input type="checkbox" name="agree" value="体育">利用規約に同意する<br>
+    <input type="submit" value="送信"><input type="reset" value="リセット">          
+  </div>      
+    </div>
+
+
+
+    <!--3.<TEXTAREA>タグ-->
+    <button type="button" class="collapsible">3.&lt;TEXTAREA&gt;タグ</button>
+    <div class="collapse-content">
+        <p>&lt;textarea&gt;は複数行の入力フィールドを作成するタグです<br>
+
+rows属性は、テキスト領域に表示される行数を指定します。<br>
+
+cols属性は、テキスト領域の表示幅を指定します。</P>
+
+
+<b>例：</b>[sample4-2.html]<br>
+<pre class="prettyprint linenums">
+ご感想：&lt;br&gt;
+&lt;textarea name="comment" rows="4" cols="40" placeholder="ここに感想を記入してください。"&gt;&lt;/textarea&gt;&lt;br&gt;
+&lt;input type="submit" value="送信"&gt;&lt;input&gt;&lt;br&gt;type="reset" value="リセット"&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+ご感想：<br>
+<textarea name="comment" rows="4" cols="40" placeholder="ここに感想を記入してください。"></textarea><br>
+<input type="submit" value="送信"><input type="reset" value="リセット">       
+  </div><br>
+    </div>
+
+
+
+    <!--4.<select>タグ-->
+    <button type="button" class="collapsible">4.&lt;select&gt;タグ</button>
+    <div class="collapse-content">
+        <p>&lt;SELECT&gt;はセレクトボックスを作成するタグです。
+        セレクトボックス内の選択肢は&lt;OPTION&gt;タグで指定します。 </P>
+
+
+<b>例：</b>[sample4-3.html]<br>
+<pre class="prettyprint linenums">
+&lt;p&gt;血液型：&lt;br&gt;
+    &lt;select name="blood"&gt;
+        &lt;option value="A"&gt;A型&lt;/option&gt;
+        &lt;option value="B"&gt;B型&lt;/option&gt;
+        &lt;option value="O"&gt;O型&lt;/option&gt;
+        &lt;option value="AB"&gt;AB型&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
+&lt;p&gt;星座：&lt;br&gt;
+    &lt;select name="horoscope" size="12"&gt;
+        &lt;option value="Aries"&gt;おひつじ座&lt;/option&gt;
+        &lt;option value="Taurus"&gt;おうし座&lt;/option&gt;
+        &lt;option value="Gemini"&gt;ふたご座&lt;/option&gt;
+        &lt;option value="Cancer"&gt;かに座&lt;/option&gt;
+        &lt;option value="Leo"&gt;しし座&lt;/option&gt;
+        &lt;option value="Virgo"&gt;おとめ座&lt;/option&gt;
+        &lt;option value="Libra"&gt;てんびん座&lt;/option&gt;
+        &lt;option value="Scorpio"&gt;さそり座&lt;/option&gt;
+        &lt;option value="Saggitarius"&gt;いて座&lt;/option&gt;
+        &lt;option value="Capricorn"&gt;やぎ座&lt;/option&gt;
+        &lt;option value="Aquarius"&gt;みずがめ座&lt;/option&gt;
+        &lt;option value="Pisces"&gt;うお座&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<p>血液型：<br>
+<select name="blood">
+<option value="A">A型</option>
+<option value="B">B型</option>
+<option value="O">O型</option>
+<option value="AB">AB型</option>
+</select></p>
+<p>星座：<br>
+<select name="horoscope" size="12">
+<option value="Aries">おひつじ座</option>
+<option value="Taurus">おうし座</option>
+<option value="Gemini">ふたご座</option>
+<option value="Cancer">かに座</option>
+<option value="Leo">しし座</option>
+<option value="Virgo">おとめ座</option>
+<option value="Libra">てんびん座</option>
+<option value="Scorpio">さそり座</option>
+<option value="Saggitarius">いて座</option>
+<option value="Capricorn">やぎ座</option>
+<option value="Aquarius">みずがめ座</option>
+<option value="Pisces">うお座</option>
+</select></p>           
+  </div>      
+    </div>
+
+
+    <!--5.<FORM&>タグ種類-->
+    <button type="button" class="collapsible">5.&lt;FORM&gt;タグ</button>
+    <div class="collapse-content">
+        <p>action属性と method属性を利用して、フォームに入力されたものをサーバに送信することができます。</P>
+
+<ul>
+    <li><b>action="URI"</b>は、送信先URLを指定します。
+    <li><b>method="HTTPメソッド"</b>は method属性の値として指定できるのは以下の２種類です。
+        <ul>
+            <li>get …… 送信内容がURL中に埋め込まれます
+            <li>post …… 送信内容がURLとは別に送られます。
+        </ul>
+</ul>            
+
+<b>例：</b>[sample4-4.html]<br>
+<pre class="prettyprint linenums">
+&lt;form action="http://google.com" method="post"&gt;
+    名前：&lt;input type="text" name="name" size="40"&gt;&lt;br&gt;
+    性別：&lt;input type="radio" name="sex" value="male"&gt;男&lt;input type="radio" name="sex" value="female"&gt;女&lt;br&gt;
+    血液型：&lt;select name="blood"&gt;
+        &lt;option value="A"&gt;A型&lt;/option&gt;
+        &lt;option value="B"&gt;B型&lt;/option&gt;
+        &lt;option value="O"&gt;O型&lt;/option&gt;
+        &lt;option value="AB"&gt;AB型&lt;/option&gt;
+    &lt;/select&gt;
+    ご感想：&lt;br&gt;
+    &lt;textarea name="comment" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br&gt;
+    &lt;input type="submit" value="送信"&gt;&lt;input type="reset" value="リセット"&gt;
+&lt;/form&gt;
+    
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<form action="http://google.com" method="post">
+名前：<input type="text" name="name" size="37"><br>
+性別：<input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女<br>
+血液型：<select name="blood">
+<option value="A">A型</option>
+<option value="B">B型</option>
+<option value="O">O型</option>
+<option value="AB">AB型</option>
+</select>
+ご感想：<br>
+<textarea name="comment" rows="4" cols="40"></textarea><br>
+
+
+<input type="submit" value="送信"><input type="reset" value="リセット">
+
+</form>       
+  </div><br>
+</div>
+
+
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex3_1.html]<br>
+        テーブルと合わせて下記のフォームを作成してください。</p>
+
+    <div style="background-color: darkgray;">
+    <h1>お問い合わせフォーム</h1>    
+<form action="#" method="post">
+<table border="1">
+<tr>    
+<th bgcolor="lightblue">お名前</th><td><input type="text" name="name" size="42" maxlength="10" required></td>
+</tr>
+<tr>    
+<th bgcolor="lightblue">内容</th><td><textarea name="name" rows="5" cols="40" placeholder="お問い合わせ内容" required></textarea></td>
+</tr>
+<tr>
+<th bgcolor="lightblue">性別</th><td><input type="radio" name="gender" value="male">男性　<input type="radio" name="gender" value="female">女性</td>    
+</tr>
+<tr>
+<th bgcolor="lightblue">スマートフォン</th><td><input type="checkbox" name="mobile" value="1">iPhone<input type="checkbox" name="mobile" value="2">Android<input type="checkbox" name="mobile" value="3">その他</td>    
+</tr>
+<tr>
+<th bgcolor="lightblue">地域</th><td><select name="area"><option value="" selected>選択</option><option value="1">北海道</option><option value="2">東北</option><option value="3">関東</option><option value="4">甲信</option><option value="5">北陸</option><option value="6">東海</option><option value="7">関西</option><option value="8">中四国</option><option value="9">九州・沖縄</option></select></td>    
+    </tr>    
+
+<tr><td align="center" colspan="2"><input type="submit" value="送信">　 　<input type="reset" value="リセット">　　　　　　　　
+    </td></tr>
+    </table>
+</form>    
+    </div>   
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

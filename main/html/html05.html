@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第５章　CSS</title>
+    <style>
+    table {
+    border-collapse: separate;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第５章　CSS</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、CSSついて説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--リスト・テーブル-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">CSS</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+    <!--CSSとは-->
+    <button type="button" class="collapsible">1.CSSとは</button>
+    <div class="collapse-content">
+        <p>CSSとは「Cascading Style Sheets」 の頭文字をとったものであり、HTMLで作られた文書構造にデザインを加えて見栄えを整えるスタイルシートと呼ばれます。<br><br>
+
+        CSSを使うと、次のようなことができます。</p>
+
+        <ul>
+            <li>HTMLに含まれる個々のコンテンツの配置を制御できる
+            <li>隣り合ったコンテンツ同士の隙間を調整できる
+            <li>フォントのサイズや種類を調整できる
+            <li>コンテンツの背景に色を指定できる
+        </ul>
+
+        <img style="height: 400px;"src="../assets/img/html05/html01.jpg" alt="html01 pic here">
+    </div>
+
+
+
+
+    <!--2.CSSの3つの要素-->
+    <button type="button" class="collapsible">2.CSSの3つの要素</button>
+    <div class="collapse-content">
+    <p>Webページの見栄えを整えるにあたり、CSSでは次の<strong>3つの要素</strong>を用います。</p>
+    <ul>
+        <li><span style="font-size: medium;">セレクタ – どのHTMLタグに対して見合えを調整するか</span></li>
+        <li><span style="font-size: medium;">プロパティ – どういった内容のデザインを施すか</span></li>
+        <li><span style="font-size: medium;">値 – プロパティはどの程度か</span></li>
+    </ul>
+
+        <img style="height: 150px;"src="../assets/img/html05/html02.png" alt="html02 pic here">
+
+<p>この例では「h1タグ」に対して、文字の大きさを20ピクセルにしする設定です。</p>
+
+    </div>
+
+
+
+    <!--3.スタイルの定義場所 -->
+    <button type="button" class="collapsible">3.スタイルの定義場所 </button>
+    <div class="collapse-content">
+        <p>HTMLでのスタイル設定は、大きく分けて3つの方法があります。</P>
+<ul>
+    <li>外部ファイルによるスタイル設定
+    <li>head要素内のstyle要素で指定
+    <li>インラインstyle属性
+</ul>
+<br>
+<hr style="height:0.5px;background-color:#878c91;">
+<br>
+<ul><li>外部ファイルによるスタイルを設定した外部ファイルは、head要素の中のlink 要素をつかって取り込みます。</ul>
+<pre class="prettyprint linenums">
+&lt;head&gt;    
+    &lt;link rel="stylesheet" href="default.css" type="text/css"/&gt;
+&lt;/head&gt;
+</pre>
+<br>
+<hr style="height:0.5px;background-color:#878c91;">
+<br>
+<ul><li>head要素内のstyle1はhead要素の中に style要素を加えてスタイルを記述すると、そのHTML文書の全体を通して共通のスタイルを設定することができます。</ul>
+<pre class="prettyprint linenums">
+&lt;head&gt;
+  &lt;style type="text/css"&gt;
+    p  {color: red}
+    h2 {color: blue; font-size: 120%}
+  &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+
+<br>
+<hr style="height:0.5px;background-color:#878c91;">
+<br>
+<ul><li>インラインstyle属性は個々の“要素”のタグに style属性としてスタイル情報を埋め込むことで、そのタグ（“要素”）の範囲にスタイルを設定します。</ul>
+<pre class="prettyprint linenums">
+&lt;p style="color: red"&gt;これは赤い文字の段落。&lt;/p&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<p style="color: red">これは赤い文字の段落。</p>
+  </div><br>
+    </div>
+
+
+
+    <!--4.プロパティの種類-->
+    <button type="button" class="collapsible">4.プロパティの種類</button>
+    <div class="collapse-content">
+        <p>プロパティ自体は他にも多くありますが、主に使われているのは以下になります。</p>
+<table border="1"  style=" border-collapse: collapse">
+<tbody>
+<tr>
+<td style="background-color: grey; text-align: center;">プロパティ</td>
+<td style="background-color: grey; text-align: center;">説明文</td>
+</tr>
+<tr>
+<td style="text-align: center;">color</td>
+<td style="text-align: center;">文字色を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">background</td>
+<td style="text-align: center;">背景の指定をする</td>
+</tr>
+<tr>
+<td style="text-align: center;">background-color</td>
+<td style="text-align: center;">背景の色を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">font-family</td>
+<td style="text-align: center;">フォントの種類を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">font-weight</td>
+<td style="text-align: center;">フォントの太さを指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">line-height</td>
+<td style="text-align: center;">行の高さを指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">text-align</td>
+<td style="text-align: center;">行の揃え位置を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">width</td>
+<td style="text-align: center;">幅を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">height</td>
+<td style="text-align: center;">高さを指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">margin</td>
+<td style="text-align: center;">マージンの指定をする</td>
+</tr>
+<tr>
+<td style="text-align: center;">padding</td>
+<td style="text-align: center;">パディングの指定をする</td>
+</tr>
+<tr>
+<td style="text-align: center;">border</td>
+<td style="text-align: center;">ボーダーの色や太さを指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">position</td>
+<td style="text-align: center;">要素の配置方法を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">display</td>
+<td style="text-align: center;">要素の表示形式を指定する</td>
+</tr>
+<tr>
+<td style="text-align: center;">float</td>
+<td style="text-align: center;">左か右に寄せて配置する</td>
+</tr>
+<tr>
+<td style="text-align: center;">z-index</td>
+<td style="text-align: center;">要素の重なりの順序を指定する</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+    </div>
+
+
+    <!--5.HTMLにCSSを添加-->
+    <button type="button" class="collapsible">5.HTMLにCSSを添加</button>
+    <div class="collapse-content">
+<b>例：</b>[sample5-1.html]<br>
+<pre class="prettyprint linenums">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title>タイトル&lt;/title&gt;
+        &lt;style&gt;
+            h1 {
+                color: red;
+            }
+            p {
+                color: green;
+                font-size: 30px;
+                margin-left: 40%;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;見出し&lt;/h1&gt;
+        &lt;p&gt;本文&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+        <h1 style="color: red;">見出し</h1>
+        <p style="color: green;
+                font-size: 30px;
+                margin-left: 40%;">本文</p>      
+  </div><br>
+</div>
+
+
+
+
+    <!--6.CSSコメントの書き方-->
+    <button type="button" class="collapsible">6.CSSコメントの書き方</button>
+    <div class="collapse-content">
+             
+        <p>&lt;!-- ... --&gt; は HTMLソースの中にコメントを記述します。コメントはブラウザには表示されません。</p>
+<pre class="prettyprint linenums">
+/*  コメント */
+</pre>
+
+<p>/* ... */ の間を改行して書くこともできます。  
+<pre class="prettyprint linenums">
+/*  
+改行しても
+コメントに
+なります 
+*/
+</pre>    
+
+
+
+    </div>
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex5_1.html]<br>
+        三章で作ったウェブページにCSSを添加しましょう。</p>
+        <img style="height: 400px;"src="../assets/img/html05/html03.jpg" alt="html01 pic here">
+
+    <div style="background-color: darkgray;">
+
+    </div>    
+</div>
+  
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第1章　HTMLの書き方</title>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第1章　HTMLの書き方</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、文章の改行・段落表示と属性について説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--HTMLの書き方-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">HTMLの書き方</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+
+
+    <!--HTMLタグとは-->
+    <button type="button" class="collapsible">1.HTMLタグとは</button>
+    <div class="collapse-content">
+        <p>
+HTMLタグとは、その文書がHTML文書であることを指定するタグです。<br>
+このタグにより、<開始タグ>～</終了タグ>で内容を囲めば、 要素（element）の種類を指定することができます。 ウェブページ内の各部分をどのような要素に割り当てるかによって、 タグの種類を使い分けます。 <br><br>
+<img style="height: 200px"; src="../assets/img/html01/html01.jpg" alt="html01 pic here"><br><br>
+以下の例では、&lt;p&gt;タグを使用して&lt;p>～&lt;/p&gt;の部分が段落となるp要素であることを示しています。 
+
+<pre class="prettyprint linenums">
+&lt;p&gt;本文です。&lt;/p&gt;
+</pre>
+        </P>
+    </div>
+<br><h2 style="font-weight: 400;">タグ</h2>
+
+    <!--HTMLタグの主な種類-->
+    <button type="button" class="collapsible">2-1.HTMLタグの主な種類</button>
+    <div class="collapse-content">
+        <p>
+
+主なタグには以下のようなものがあります。
+<table border="1">
+<tbody><tr>
+<th>&lt;a&gt;</th>
+<td>他のページなどに、リンク（anchor）に指定するタグ</td>
+</tr>
+<tr>
+<th>&lt;h1&gt;〜&lt;h6&gt;</th>
+<td>見出し（heading）に指定するタグ</td>
+</tr>
+<tr>
+<th>&lt;p&gt;</th>
+<td>段落（paragraph）に指定するタグ</td>
+</tr>
+<tr>
+<th>&lt;br&gt;</th>
+<td>改行に指定するタグ</td>
+</tr>
+</tr>
+</tbody></table>
+        </P>
+    </div>
+
+
+    <!--&lt;a&gt;タグ-->
+    <button type="button" class="collapsible">2-2.&lt;a&gt;タグ</button>
+    <div class="collapse-content">
+        <p>
+HTMLリンクはハイパーリンクで、 &lt;a&gt;タグを使用します。<br>
+
+リンクをクリックして他のページに遷移することができます。<br>
+<br>
+<b>例：</b>[sample1-1.html]
+
+<pre class="prettyprint linenums">
+&lt;a href="https://academy.addli-ne.com/"&gt;ADD ACADEMYリング&lt;/a&gt;
+&lt;a href="mailto:google＠gmail.com"&gt;メールリング&lt;/a&gt;
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">    
+ <a href="https://academy.addli-ne.com/">ADD ACADEMYリング</a><br><br>
+  <a href="mailto:google＠gmail.com/">メールリング</a>
+<br><br>
+</div>
+        </P>
+    </div>
+
+
+    <!--&lt;h1&gt;～&lt;h6&gt;タグ-->
+    <button type="button" class="collapsible">2-3.&lt;h1&gt;～&lt;h6&gt;タグ</button>
+    <div class="collapse-content">
+        <p>
+見出し  &lt;h1&gt;～&lt;h6&gt;タグ<br><br>
+<b>例：</b>[sample1-2.html]
+
+<pre class="prettyprint linenums">
+&lt;h1&gt;超特大見出し&lt;/h1&gt;
+&lt;h2&gt;特大見出し&lt;/h2&gt;
+&lt;h3&gt;大見出し&lt;h3&gt;
+&lt;h4&gt;中見出し&lt;h4&gt;
+&lt;h5&gt;小見出し&lt;h5&gt;
+&lt;h6&gt;ミニ見出し&lt;h6&gt;
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">
+ <h1>超特大見出し</h1>
+ <h2>特大見出し</h2>
+ <h3>大見出し</h3>
+ <h4>中見出し</h4>
+ <h5>小見出し</h5>
+ <h6>ミニ見出し</h6>
+</div>
+        </P>
+    </div>
+
+
+    <!--&lt;p&gt;タグ-->
+    <button type="button" class="collapsible">2-4.&lt;p&gt;タグ</button>
+    <div class="collapse-content">
+        <p>段落（ &lt;/p&gt;タグ）<br><br>
+
+<b>例：</b>[sample1-3.html]
+<pre class="prettyprint linenums">
+&lt;h1&gt;超特大見出し&lt;/h1&gt;
+&lt;p&gt;本文1です。&lt;/p&gt;
+&lt;p&gt;本文2です。&lt;/p&gt;
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">
+<p >本文1です。</p>   
+<p >本文2です。</p>
+</div>
+        </P>
+    </div>
+
+
+    <!--&lt;br&gt;タグ-->
+    <button type="button" class="collapsible">2-5.&lt;br&gt;タグ</button>
+    <div class="collapse-content">
+        <p>改行（ &lt;br&gt;タグ）<br><br>
+
+<b>例：</b>[sample1-4.html]
+
+<pre class="prettyprint linenums">
+&lt;p&gt;本文1です。&lt;br&gt;本文2です。&lt;/p&gt;
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">
+<p >本文1です。<br>本文2です。</p>
+</div>
+        </P>
+    </div>
+
+
+
+
+<br><h2 style="font-weight: 400;">構文と属性</h2>
+    <!--HTMLの属性-->
+    <button type="button" class="collapsible">3-1.HTML属性</button>
+    <div class="collapse-content">
+      <p>
+      HTMLの各要素には、属性という何かしらの設定を付ける事ができます。 </p>
+      <b>例：</b>[sample1-5.html]
+<pre class="prettyprint linenums">
+&lt;p align="left"&gt;左本文です。&lt;/p&gt;
+&lt;p align="center"&gt;本文です。&lt;/p&gt;
+&lt;p align="right"&gt;右本文です。&lt;/p&gt;
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">
+ <p align="left" >左本文です。</p>
+ <p align="center">本文です。</p>
+ <p align="right">右本文です。</p>
+</div>
+</p>
+    </div>
+
+
+
+
+    <!--HTMLの属性-->
+    <button type="button" class="collapsible">3-2.HTML構文</button>
+    <div class="collapse-content">
+      <p>
+      HTMLの各要素には、属性という何かしらの設定を付ける事ができます。 </p>
+      <b>例：</b>[sample1-6.html]
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title>タイトル&lt;/title&gt;
+    &lt;/head&gt; 
+
+    &lt;body>
+        &lt;h1&gt;画面に表示するものはすべてボディタグの中に書きます。&lt;/h1&gt;
+        &lt;p&gt;段落中に&lt;br&gt;改行&lt;/p&gt;
+        &lt;a https://academy.addli-ne.com/">ADD ACADEMYリング&lt;/a&gt;
+    &lt;/body&gt;         
+&lt;/html&gt;　
+</pre>
+<b>実行結果</b>
+<div style="background-color: darkgray;">
+<h1>
+画面に表示するものはすべてボディタグの中に書きます。
+</h1>
+<p>段落中に<br> 改行</p>
+<a href="https://academy.addli-ne.com/">ADD ACADEMYリング</a>
+</div><br>
+
+<b>HTML構文の説明</b>
+<ul>
+    <li>&lt;!DOCTYPE html&gt;  は文書型宣言タグ、SGMLやXML文書を文書型定義と結びつけるための宣言します。
+    <li>&lt;html&gt;  は「HTMLの記述を開始する」または「終了する」。
+    <li>&lt;head&gt;  は文書のヘッダ部分、タグで囲まれた内容はhtmlファイルの情報を宣言する。
+    <li>&lt;meta charset="utf-8"&gt; は文字化け防止のため、        ブラウザや検索ロボットにホームページの情報を知らせるためのタグです。
+    <li>&lt;title&gt;  は文書にタイトルをつけるタグ、サイトタイトルの題名を表す内容を記述します。。
+    <li>&lt;body&gt;  はボディタグ、文書の本体部分です。
+<ul>    
+    </p>
+    </div>
+
+
+
+        <!--3.&lt;div&gt;タグ-->
+    <button type="button" class="collapsible">3-3.&lt;div&gt;タグ</button>
+    <div class="collapse-content">
+        <p>&lt;div&gt;タグは、開始タグ&lt;div&gt;と終了タグ&lt;/div&gt;とで囲み、レイアウトを区画化してブロック分けをする際に使います。<br>
+
+        ブロック化することで、align属性の水平方向の位置などをまとめて指定することができます。
+<pre class="prettyprint linenums">
+&lt;div align="center"&gt; 　
+　&lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png　width="20%"&gt;
+　&lt;p&gt; 犬です。&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div align="right"> 　
+　&lt;img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" width="20%"&gt;
+　&lt;p&gt;犬です。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<b>実行結果</b><br><br>
+　 <div style="background-color: darkgray;">
+<div align="center"> 　
+　<img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" width="20%">
+　<p>犬です。</p>
+</div>
+<div align="right"> 　
+　<img src="https://frame-illust.com/fi/wp-content/uploads/2017/03/9687.png" width="20%">
+　<p>犬です。</p>
+</div>
+</a>    
+        </P>
+    </div>
+</div>
+
+
+
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex1_1.html]<br>
+        リンクをクリックしたらADD ACADEMYのホームページが開けるように下記のページを作成してください。</p>
+　 <div style="background-color: darkgray;">
+    <h1>左寄せ(h1タグ)</h1>
+    <h2 align="center">中央寄せ(h2タグ)</h2>
+    <p>段落１(pタグ)</p>
+    <p>段落２(pタグ)</p>
+    <h4 align="right"><a href="https://academy.addli-ne.com/">右寄せのADD ACADEMYリンク(h4、aタグ)</a></h4>
+　</div>
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

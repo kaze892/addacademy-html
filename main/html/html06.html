@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第６章　WEBレイアウト</title>
+    <style>
+    table {
+    border-collapse: separate;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第６章　WEBレイアウト</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、CSSついて説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--リスト・テーブル-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">WEBレイアウト</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+    <!--CSSとは-->
+    <button type="button" class="collapsible">1.WEBレイアウト</button>
+    <div class="collapse-content">
+        <p>Webサイトのレイアウトはページ要素であるヘッダー、ナビゲーション、コンテンツ、フッターをどのうように配置するかで決まります。基本レイアウトは上部ナビゲーション型 、左サイドナビゲーション型、右サイドナビゲーションなどあります。</p>
+
+<b>例：</b>[sample6-1.html]<br>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>タイトル&lt;/title&gt;
+    &lt;style&gt;
+    #b01 {
+        border:dashed 5px red;
+        width:100%;
+        height:70px;
+        text-align: center;
+        font-size:30px;
+        color:red;
+    }
+    #b02 {
+        border:dashed 5px blue;
+        width:100%;
+        position:relative;
+        height:60px;
+        margin:0 0 0 0;
+        text-align: center;
+        font-size:30px;
+        color:blue;
+    }
+        #b03 {
+        border:dashed 5px green;
+        width:100%;
+        position:relative;
+        height:200px;
+        margin:0 0 0 0;
+        text-align: center;
+        font-size:30px;
+        color:green;
+    }
+    #b04 {
+        border:dashed 5px gray;
+        width:100%;
+        height:70px;
+        position:relative;
+        text-align: center;
+        font-size:30px;
+        color:gray;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="b01"&gt;ヘッダー&lt;/div&gt;
+    &lt;div id="b02"&gt;ナビゲーション&lt;/div&gt;
+    &lt;div id="b03"&gt;コンテンツ&lt;/div&gt;
+    &lt;div id="b04"&gt;フッター&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+    <br>
+<div>
+    <style>
+    #b01 {
+        border:dashed 5px red;
+        width:100%;
+        height:70px;
+        text-align: center;
+        font-size:30px;
+        color:red;
+    }
+    #b02 {
+        border:dashed 5px blue;
+        width:100%;
+        position:relative;
+        height:60px;
+        margin:0 0 0 0;
+        text-align: center;
+        font-size:30px;
+        color:blue;
+    }
+        #b03 {
+        border:dashed 5px green;
+        width:100%;
+        position:relative;
+        height:200px;
+        margin:0 0 0 0;
+        text-align: center;
+        font-size:30px;
+        color:green;
+    }
+    #b04 {
+        border:dashed 5px gray;
+        width:100%;
+        height:70px;
+        position:relative;
+        text-align: center;
+        font-size:30px;
+        color:gray;
+    }
+
+</style>
+<div id="b01">ヘッダー</div>
+<div id="b02">ナビゲーション</div>
+<div id="b03">コンテンツ</div>
+<div id="b04">フッター</div>
+<br>
+</div> 
+  </div><br>
+    </div>
+
+
+
+
+        <!--6.&lt;div&gt;タグ-->
+    <button type="button" class="collapsible">2.CSSを&lt;div&gt;タグに加えよう</button>
+    <div class="collapse-content">
+        <p>&lt;div&gt;タグはそれ自身は特に意味を持っていませんが、 CSSを加えてウェブページのレイアウトを設定することができます。</p>
+
+<b>例：</b>[sample6-2.html]<br>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>タイトル&lt;/title&gt;   
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="width:50px;height:50px;background-color:red;"&gt;div1&lt;/div&gt;
+    &lt;div style="width:50px;height:50px;background-color:green;margin:0 0 0 50px;"&gt;div2&lt;/div&gt;
+    &lt;div style="width:50px;height:50px;background-color:blue;margin:0 0 0 100px;"&gt;div3&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<b>実行結果</b>
+　 <div style="background-color: darkgray;">
+<div style="width:50px;height:50px;background-color:red;">div1</div>
+<div style="width:50px;height:50px;background-color:green;margin:0 0 0 50px;">div2</div>
+<div style="width:50px;height:50px;background-color:blue;margin:0 0 0 100px;">div3</div>
+    </div>
+    <br>
+</div>
+
+
+
+
+
+    <!--3.idとclass属性-->
+    <button type="button" class="collapsible">3.idとclass属性</button>
+    <div class="collapse-content">
+    <p>
+これまでCSSのセレクタは要素( &lt;h1&gt;、 &lt;p&gt;など)を指定していましたが、 &lt;p&gt;要素のように多用される要素の場合、同じ要素でも別なCSSを適用したい場合があります。そのような場合、HTMLの id属性と class属性を利用します。</p>
+
+    <ul>
+        <li>id属性と class属性を利用することで同じ &lt;p&gt;要素に別々のCSSを適用することができます
+
+        <li>id属性の値が重複してはなりません、CSSで要素のidを指定する際、id名の前 " #" を添加が必要です
+
+        <li>class属性の値を何度でも用いることができます、CSSで要素のclassを指定する際、class名の前に " ." の添加が必要です
+    </ul>
+<b>例：</b>[sample6-3.html]
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>タイトル&lt;/title&gt;
+    &lt;style&gt;
+    #I1 {
+        font-size: 25px;
+    }
+    #I2 {
+        color:red;
+    }
+    .C1 {
+         font-size: 30px;
+         color:green;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id="I1"&gt;id要素1&lt;/p&gt;
+    &lt;p id="I2"&gt;id要素2&lt;/p&gt;
+    &lt;p class="C1"&gt;class要素1&lt;/p&gt;
+    &lt;p class="C1"&gt;class要素2&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<b>実行結果</b>
+　 <div style="background-color: darkgray;">
+<style>
+    #I1 {
+        font-size: 25px;
+    }
+    #I2 {
+        color:red;
+    }
+    .C1 {
+         font-size: 30px;
+         color:green;
+    }
+</style>
+    <p id="I1">id要素</p>
+    <p id="I2">id要素</p>
+    <p class="C1">class要素</p>
+    <p class="C1">class要素</p>
+    </div>
+</div>
+
+
+
+
+
+    <!--4.positionと z-indexプロパティ-->
+    <button type="button" class="collapsible">4.positionと z-indexプロパティ</button>
+    <div class="collapse-content">
+        <p>positionプロパティは、HTML要素の配置方法を、 relative相対位置と absolute絶対位置を指定する際に使用します。
+<br>
+z-indexプロパティは、HTML要素の重なりの順序を指定する際に使用します。</p>
+<pre class="prettyprint linenums">
+&lt;style&gt;
+セレクタ名{
+    position: 位置種類;
+    z-index: 数値;
+}
+&lt;/style&gt;
+</pre>
+<br>
+
+<b>z-indexの指定なり</b><br>
+<b>例：</b>[sample6-4.html]
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>タイトル&lt;/title&gt;
+    &lt;style&gt;
+    .divSize   { width: 100px; height: 100px; border: 1px black solid; font-size: 40px;  }
+    .divParent { width: 200px; height: 200px; border: 1px black dotted; position: relative; }
+    /* 背景色付け */
+    #div1 {background-color: #FF8550; }
+    #div2 {background-color: #93ca76; }
+    #div3 {background-color: #76b9ca; }
+    /* z-indexの指定なし */
+    #div1 { position: absolute; }
+    #div2 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    #div3 {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="div1" class="divSize"&gt;A&lt;/div&gt;
+    &lt;div id="div2" class="divSize"&gt;B&lt;/div&gt;
+    &lt;div id="div3" class="divSize"&gt;C&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">  
+<style>  
+    .divSize   { width: 100px; height: 100px; border: 1px black solid; font-size: 40px;  }
+    .divParent { width: 200px; height: 200px; border: 1px black dotted; position: relative; }
+    /* 背景色付け */
+    #div1 {background-color: #FF8550; }
+    #div2 {background-color: #93ca76; }
+    #div3 {background-color: #76b9ca; }
+    /* z-indexの指定なし */
+    #div1 { position: absolute; }
+    #div2 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    #div3 {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+    }
+</style>
+    <div class="divParent">
+        <div id="div1" class="divSize">A</div>
+        <div id="div2" class="divSize">B</div>
+        <div id="div3" class="divSize">C</div>
+    </div>
+    </div>
+
+<br><hr style="height:0.5px;background-color:#878c91;"><br>
+<b>z-indexの指定あり</b><br>
+<b>例：</b>[sample6-5.html]
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title>タイトル&lt;/title&gt;
+    &lt;style&gt;
+    .divSize   { width: 100px; height: 100px; border: 1px black solid; font-size: 40px;  }
+    .divParent { width: 200px; height: 200px; border: 1px black dotted; position: relative;}
+    /* 背景色付け */
+    #z_div1 {background-color: #FF8550; }
+    #z_div2 {background-color: #93ca76; }
+    #z_div3 {background-color: #76b9ca; }
+    /* z-indexの指定あり */
+    #z_div1 {
+        position: absolute;
+        z-index: 3;
+    }
+    #z_div2 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 2;
+    }
+    #z_div3 {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+        z-index: 1;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="div1" class="divSize"&gt;A&lt;/div&gt;
+    &lt;div id="div2" class="divSize"&gt;B&lt;/div&gt;
+    &lt;div id="div3" class="divSize"&gt;C&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">  
+<style>  
+.divSize   { width: 100px; height: 100px; border: 1px black solid; font-size: 40px;  }
+.divParent { width: 200px; height: 200px; border: 1px black dotted; position: relative;}
+/* 背景色付け */
+#z_div1 {background-color: #FF8550; }
+#z_div2 {background-color: #93ca76; }
+#z_div3 {background-color: #76b9ca; }
+/* z-indexの指定あり */
+#z_div1 {
+    position: absolute;
+    z-index: 3;
+}
+#z_div2 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+#z_div3 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+}
+</style>
+    <div class="divParent">
+        <div id="z_div1" class="divSize">A</div>
+        <div id="z_div2" class="divSize">B</div>
+        <div id="z_div3" class="divSize">C</div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex5_1.html]<br>
+        二章で作ったウェブページにCSSを添加しましょう。</p>
+        <img style="height: 400px;"src="../assets/img/html05/html03.jpg" alt="html01 pic here">
+
+    <div style="background-color: darkgray;">
+
+    </div>    
+</div>
+  
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>

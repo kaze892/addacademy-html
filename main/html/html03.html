@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/styling.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../assets/css/plugins.min.css">
+    <title>第３章　リスト・テーブル</title>
+    <style>
+    table {
+    border-collapse: separate;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="ms-hero-page ms-hero-img-headbg ms-hero-bg-primary mb-6">
+        <div class="container">
+            <a class="home_icon" href="../main-index.html"><img style="height: 80px;"src="../assets/img/logo.png" alt=""></a>
+            <div class="text-center">
+                <h1 class="head1 animated zoomInDown animation-delay-5">第３章　リスト・テーブル</h1>
+                <p class="head2 animated fadeInUp animation-delay-7">この章では、リスト・テーブルについて説明します。</p>
+                <a class="home-btn btn-raised btn-warning animated zoomInDown animation-delay-20;"href="../HTML/html-index.html" >HOMEPAGE</a>
+                    <label id="switch" class="switch animated fadeInDownBig">
+                         <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                     </label>
+            </div>
+        </div>
+    </div><br>
+                    
+<!--article-container-->
+<div class="article-container animated fadeInLeft animation-delay-15" style="margin: 0 auto; max-width: 1024px;">
+
+
+
+     <!--リスト・テーブル-->
+    <h1 class="article-container animated bounceInRight animation-delay-20">リスト・テーブル</h1>
+    <hr style="height:0.5px;background-color:#878c91;">
+
+<br>
+<h2 style="font-weight: 400;">リスト</h2>
+    <!--リストとは-->
+    <button type="button" class="collapsible">1-1.リストとは</button>
+    <div class="collapse-content">
+        <p>リストとは箇条書きで情報を表現する手段です。リストは短い文字量でも、表現したい論旨を的確にわかり易く表現することが可能となります。<br>
+リストには順序ありのものととなしのリストがあります。
+</p>
+
+<ul>
+    <li><b>&lt;ul&gt;～&lt;/ul&gt;</b>
+        unorderd list タグ。<br>
+        このタグで囲まれた領域が順序なしリストであることを示しています。<br><br>
+    
+     <li><b>&lt;ul&gt;～&lt;/ul&gt;</b>
+        orderd list タグ。<br>
+        このタグで囲まれた領域が順序ありリストであることを示しています。<br><br>
+    </li>
+
+    <li><b>&lt;li&gt;～&lt;/li&gt;</b>
+        list タグ。<br>
+        このタグで囲まれた領域がリストの一項目です。<br>
+        &lt;ul&gt; タグや次の項目の &lt;ol&gt; タグに囲まれた領域で使います。
+    </li>
+</ul>
+    </div>
+
+
+
+
+    <!--1-2.順序なしリスト-->
+    <button type="button" class="collapsible">1-2.順序なしリスト</button>
+    <div class="collapse-content">
+        <p>順序なしリストには &lt;ul&gt;～&lt;/ul&gt; タグと &lt;li&gt;～&lt;/li&gt; タグを使います。</P>
+
+
+<b>例：</b>[sample3-1.html]<br>
+<pre class="prettyprint linenums">
+&lt;h3&gt;カレーの作り方&lt;/h3&gt;
+   &lt;ul&gt;
+      &lt;li&gt;肉と野菜を炒める&lt;/li&gt;
+      &lt;li&gt;水を入れて中火で煮込む&lt;/li&gt;
+      &lt;li&gt;時々アクを取る&lt;/li&gt;
+      &lt;li&gt;カレールーを入れる&lt;/li&gt;
+      &lt;li&gt;とろみがつくまで弱火で煮込む&lt;/li&gt;
+   &lt;/ul&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+    <h3>カレーの作り方</h3>
+    <ul>
+        <li>肉と野菜を炒める</li>
+        <li>水を入れて中火で煮込む</li>
+        <li>時々アクを取る</li>
+        <li>カレールーを入れる</li>
+        <li>とろみがつくまで弱火で煮込む</li>
+    </ul>            
+  </div>      
+    </div>
+
+
+
+    <!--1-3.順序なしリスト<li>種類-->
+    <button type="button" class="collapsible">1-3.順序なしリスト&lt;li&gt;属性</button>
+    <div class="collapse-content">
+        <p>&lt;li&gt;属性でマーカー記号を変えることもできます。</P>
+
+<b>type="disc"：黒丸アイコン</b><br>
+<b>例：</b>[sample3-2.html]<br>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li type="disc"&gt;リスト1&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト2&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ul>
+    <li type="disc">リスト1</li>
+    <li type="disc">リスト2</li>
+    <li type="disc">リスト3</li>
+</ul>           
+  </div><br>
+    
+
+<hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>type="circle"：白丸アイコン</b><br>
+<b>例：</b>[sample3-3.html]<br>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li type="disc"&gt;リスト1&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト2&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ul>
+    <li type="circle">リスト1</li>
+    <li type="circle">リスト2</li>
+    <li type="circle">リスト3</li>
+</ul>           
+  </div><br>
+    
+
+<hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>type="square"：四角アイコン</b><br>
+<b>例：</b>[sample3-4.html]<br>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li type="disc"&gt;リスト1&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト2&lt;/li&gt;
+  &lt;li type="disc"&gt;リスト3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ul>
+    <li type="square">リスト1</li>
+    <li type="square">リスト2</li>
+    <li type="square">リスト3</li>
+</ul>           
+  </div>      
+    </div>
+
+
+
+    <!--1-4.順序ありリスト-->
+    <button type="button" class="collapsible">1-4.順序ありリスト</button>
+    <div class="collapse-content">
+        <p>順序ありリストには &lt;ol&gt;～&lt;/ol&gt; タグと &lt;li&gt;～&lt;/li&gt; タグを使います。</P>
+
+
+<b>例：</b>[sample3-5.html]<br>
+<pre class="prettyprint linenums">
+&lt;h3&gt;カレーの作り方&lt;/h3&gt;
+   &lt;ol&gt;
+      &lt;li&gt;肉と野菜を炒める&lt;/li&gt;
+      &lt;li&gt;水を入れて中火で煮込む&lt;/li&gt;
+      &lt;li&gt;時々アクを取る&lt;/li&gt;
+      &lt;li&gt;カレールーを入れる&lt;/li&gt;
+      &lt;li&gt;とろみがつくまで弱火で煮込む&lt;/li&gt;
+   &lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+    <h3>カレーの作り方</h3>
+    <ol>
+        <li>肉と野菜を炒める</li>
+        <li>水を入れて中火で煮込む</li>
+        <li>時々アクを取る</li>
+        <li>カレールーを入れる</li>
+        <li>とろみがつくまで弱火で煮込む</li>
+    </ol>            
+  </div>      
+    </div>
+
+
+    <!--1-5.順序なしリスト<li>種類-->
+    <button type="button" class="collapsible">1-5.順序あしリスト&lt;li&gt;属性</button>
+    <div class="collapse-content">
+        <p>&lt;li&gt;属性でマーカー記号を変えることもできます。</P>
+
+<b>type="1"：アラビア数字 </b><br>
+<b>例：</b>[sample3-6.html]<br>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li type="1"&gt;リスト1&lt;/li&gt;
+  &lt;li type="1"&gt;リスト2&lt;/li&gt;
+  &lt;li type="1"&gt;リスト3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ol>
+    <li type="1">リスト1</li>
+    <li type="1">リスト2</li>
+    <li type="1">リスト3</li>
+</ol>           
+  </div><br>
+    
+
+<hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>type="A"：ローマ字（大文字）</b><br>
+<b>例：</b>[sample3-7.html]<br>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li type="A"&gt;リスト1&lt;/li&gt;
+  &lt;li type="A"&gt;リスト2&lt;/li&gt;
+  &lt;li type="A"&gt;リスト3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ol>
+    <li type="A">リスト1</li>
+    <li type="A">リスト2</li>
+    <li type="A">リスト3</li>
+</ol>           
+  </div><br>
+    
+
+<hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>type="a"：ローマ字（小文字）</b><br>
+<b>例：</b>[sample3-8.html]<br>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li type="a"&gt;リスト1&lt;/li&gt;
+  &lt;li type="a"&gt;リスト2&lt;/li&gt;
+  &lt;li type="a"&gt;リスト3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ol>
+    <li type="a">リスト1</li>
+    <li type="a">リスト2</li>
+    <li type="a">リスト3</li>
+</ol>           
+  </div>      
+
+
+
+  <hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>type="I"：ローマ数字</b><br>
+<b>例：</b>[sample3-9.html]<br>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li type="I"&gt;リスト1&lt;/li&gt;
+  &lt;li type="I"&gt;リスト2&lt;/li&gt;
+  &lt;li type="I"&gt;リスト3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ol>
+    <li type="I">リスト1</li>
+    <li type="I">リスト2</li>
+    <li type="I">リスト3</li>
+</ol>           
+  </div>   
+
+
+
+  <hr style="height:0.5px;background-color:#878c91;"><br> 
+
+
+<b>value="数値"：任意の数字から開始 </b><br>
+<b>例：</b>[sample3-10.html]<br>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;リスト1&lt;/li&gt;
+  &lt;li value="3"&gt;リスト2&lt;/li&gt;
+  &lt;li&gt;リスト3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">   
+<ol>
+    <li>リスト1</li>
+    <li value="3">リスト2</li>
+    <li>リスト3</li>
+</ol>           
+  </div>   
+    </div><br>
+
+
+
+
+
+<h2 style="font-weight: 400;">テーブル</h2>
+    <!--テーブルとは-->
+    <button type="button" class="collapsible">2-1.テーブルとは</button>
+    <div class="collapse-content">
+        <p>HTMLで行と列から成る「表」で情報を表現する際には「table」を使用します。</p>
+
+<ul>
+    <li><b>&lt;table&gt;～&lt;/table&gt;</b>table タグ。<br>
+        このタグで囲まれた領域が表 (テーブル) であることを示しています。<br><br>
+    </li>
+    <li><b>&lt;tr&gt;～&lt;/tr&gt;</b>table row タグ。<br>
+        このタグで囲まれた領域がテーブルの行 (row) になります。<br>
+        行 (row) は横1列のことです。<br><br>
+    </li>
+    <li><b>&lt;th&gt;～&lt;/th&gt;</b>table header タグ。<br>
+        このタグで囲まれた領域がテーブルの見出しセルになります。<br><br>
+    </li>
+    <li><b>&lt;td&gt;～&lt;/td&gt;</b>table data タグ。<br>
+        このタグで囲まれた領域がテーブルの内容セルになります。<br>
+    </li>
+</ul>
+    </div>
+
+
+    <!--テーブルの使い方-->
+    <button type="button" class="collapsible">2-2.テーブルの使い方</button>
+    <div class="collapse-content">
+        <p>表には&lt;table&gt;～&lt;/table&gt; タグ、行は&lt;tr&gt;～&lt;/tr&gt; タグ、見出しセルは &lt;th&gt;～&lt;th&gt;、行内のセルは&lt;td&gt;～&lt;td&gt; タグを使います。</p>
+
+<b>例：</b>[sample3-11.html]<br>
+<pre class="prettyprint linenums">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;県名&lt;/th&gt;
+    &lt;th&gt;県庁所在地&lt;/th&gt;
+    &lt;th&gt;面積&lt;/th&gt;
+    &lt;th&gt;総人口&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;東京都&lt;/td&gt;
+    &lt;td&gt;東京&lt;/td&gt;
+    &lt;td&gt;2,187.65km²&lt;/td&gt;
+    &lt;td&gt;13,044,818人&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;千葉県&lt;/td&gt;
+    &lt;td&gt;千葉市&lt;/td&gt;
+    &lt;td&gt;5,156.60km²&lt;/td&gt;
+    &lt;td&gt;6,200,335人&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;埼玉県&lt;/td&gt;
+    &lt;td&gt;さいたま市&lt;/td&gt;
+    &lt;td&gt;3,797.25km²&lt;/td&gt;
+    &lt;td&gt;7,189,176人&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;"> 
+<br>   
+<table border="1">
+  <tr>
+    <th>県名</th>
+    <th>県庁所在地</th>
+    <th>面積</th>
+    <th>総人口</th>
+  </tr>
+  <tr>
+    <td>東京都</td>
+    <td>東京</td>
+    <td>2,187.65km²</td>
+    <td>13,044,818人</td>
+  </tr>
+  <tr>
+    <td>千葉県</td>
+    <td>千葉市</td>
+    <td>5,156.60km²</td>
+    <td>6,200,335人</td>
+  </tr>
+  <tr>
+    <td>埼玉県</td>
+    <td>さいたま市</td>
+    <td>3,797.25km²</td>
+    <td>7,189,176人</td>
+  </tr>
+</table> <br>           
+  </div> 
+    </div>
+
+
+
+
+  <!--テーブルの属性-->
+    <button type="button" class="collapsible">2-3.テーブルの属性</button>
+    <div class="collapse-content">
+        <p>colspan属性で列の結合、rowspan属性で行の結合が出来ます。</p>
+
+<b>例：</b>[sample3-12.html]<br>
+<pre class="prettyprint linenums">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;セル1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;セル2&lt;/td&gt;&lt;td rowspan="2"&gt;セル3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;セル4&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">
+<br>   
+ <table border="1">
+    <tr>
+        <td colspan="2">セル1</td>
+    </tr>
+    <tr>
+        <td>セル2</td><td rowspan="2">セル3</td>
+    </tr>
+    <tr>
+        <td>セル4</td>
+    </tr>
+</table>   
+<br> 
+  </div> 
+
+<br><br> 
+<hr style="height:0.5px;background-color:#878c91;">
+
+<p><b>border="数値"：</b>外枠の太さを指定する。 <br>
+    <b>bordercolor="色"：</b>外枠の背景色を指定します。<br>
+   <b> bgcolor="色"：</b>表全体の背景色を指定します。 <br>
+   <b> rules="none"：</b>内罫線を表示しない。 <br>
+
+</p>    
+<b>例：</b>[sample3-13.html]<br>
+<pre class="prettyprint linenums">
+&lt;table border="5" bordercolor= "purple" bgcolor="green" rules="none"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;セル1&lt;/td&gt;&lt;td&gt;セル2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr bgcolor="red"&gt;
+        &lt;td>セル3&lt;/td>&lt;td&gt;セル4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;セル5&lt;/td&gt;&lt;td bgcolor="blue"&gt;セル6&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<b>実行結果</b><br>
+<div style="background-color: darkgray;">
+<br>   
+<table border="5" bordercolor= "purple" bgcolor="green" rules="none">
+    <tr>
+        <td>セル1</td><td>セル2</td>
+    </tr>
+    <tr bgcolor="red">
+        <td>セル3</td><td>セル4</td>
+    </tr>
+    <tr>
+        <td>セル5</td><td bgcolor="blue">セル6</td>
+    </tr>
+</table>
+<br> 
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<h2 style="font-weight: 400;">練習</h2>
+<!--問題1-->
+<button type="button" class="collapsible">問題１</button>
+    <div class="collapse-content">
+    <p><b>問題</b> [Ex3_1.html]<br>
+        テーブルとリストを活用して、下記のページを作成してください。</p>
+
+    <div style="background-color: darkgray;">
+    <div align="center">
+        <h2>メニュー</h2>
+            <table border="1" bordercolor= "blue">
+                <tr>
+                    <th colspan="6" bgcolor="orange">ご飯もの</th>
+                </tr>
+                
+                <tr>
+                    <th colspan="5" align="left">カレー</th>
+                    <td rowspan="2">600円</td>
+                </tr>
+                
+                    <tr>
+                        <td>にんじん</td>
+                        <td>たまねぎ</td>
+                        <td>じゃがいも</td>
+                        <td>豚肉</td>
+                        <td>カレールー</td>
+                    </tr>
+                 <tr>
+                    <td colspan="6" align="left">
+                        <ol>
+                            <li>肉と野菜を炒める</li>
+                            <li>水を入れて中火で煮込む</li>
+                            <li>時々アクを取る</li>
+                            <li>カレールーを入れる</li>
+                            <li>とろみがつくまで弱火で煮込む</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="5" align="left">チャーハン</th>
+                    <td rowspan="2">500円</td>
+                </tr>
+                <tr>
+                    <td>卵</td>
+                    <td>ねぎ</td>
+                    <td>にんじん</td>
+                    <td>チャーシュー</td>
+                    <td>ご飯</td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="left">
+                        <ol>
+                            <li>ねぎとにんじんをみじん切りして、炒める</li>
+                            <li>チャーシューを入れて、強火炒める</li>
+                            <li>卵を回し入れ、中火で炒める</li>
+                            <li>卵に火が通ったらごはんを入れて強火で炒め</li>
+                            <li>全体に味がなじんだら火から下ろせる</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="5" align="right">合計</th>
+                    <td>1100</td>
+                </tr>
+            </table>
+    <br>
+    </div> 
+    </div>   
+</div>
+
+
+    <!--article-container-->
+
+    <!--back button-->
+    <div class="text-center"><br>
+       <a href="#" onClick="javascript:history.back(-1);" class="return-btn btn-raised btn-info animated fadeIn animation-delay-30">戻る</a>
+    </div><br>
+
+<script src="../assets/js/collapse.js"></script>  
+<script src="../../cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"/></script>  
+<script src="../assets/js/darkmode.js"></script>
+
+</body>
+</html>
